@@ -81,7 +81,7 @@ const MonsterTable = ({ data }) => {
         <Table style={{backgroundColor: 'inherit', color: 'inherit', borderColor: 'inherit'}}>
           <TableHead>
             <TableRow style={{whiteSpace: 'nowrap'}}>
-              <TableCell variant='head' style={{backgroundColor: 'inherit', color: 'inherit', borderColor: 'inherit'}}>ID</TableCell>
+              <TableCell variant='head' style={{backgroundColor: 'inherit', color: 'inherit', borderColor: 'inherit'}}>ID (JP)</TableCell>
               <TableCell variant='head' style={{backgroundColor: 'inherit', color: 'inherit', borderColor: 'inherit'}}>Name (EN)</TableCell>
               <TableCell variant='head' style={{backgroundColor: 'inherit', color: 'inherit', borderColor: 'inherit'}}>HP / ATK / RCV</TableCell>
               <TableCell variant='head' style={{backgroundColor: 'inherit', color: 'inherit', borderColor: 'inherit'}}>Active Skill</TableCell>
@@ -93,7 +93,7 @@ const MonsterTable = ({ data }) => {
           <TableBody>
             {filteredData.map((row) => (
               <TableRow key={row.monster_id}>
-                <TableCell style={{backgroundColor: 'inherit', color: 'inherit', borderColor: 'inherit'}}>{row.monster_id}</TableCell>
+                <TableCell style={{backgroundColor: 'inherit', color: 'inherit', borderColor: 'inherit'}}>{row.monster_id_jp}</TableCell>
                 <TableCell style={{backgroundColor: 'inherit', color: 'inherit', borderColor: 'inherit'}}>{row.name_en}</TableCell>
                 <TableCell style={{whiteSpace: 'nowrap', backgroundColor: 'inherit', color: 'inherit', borderColor: 'inherit'}}>{`${row.hp_max} / ${row.hp_max} / ${row.rcv_max}`}</TableCell>
                 <TableCell style={{backgroundColor: 'inherit', color: 'inherit', borderColor: 'inherit'}}>{row.active_skill_desc_en}</TableCell>

@@ -17,7 +17,7 @@ const MonsterTable = ({ data }) => {
   if (searchTerm !== '') {
     switch (searchType) {
       case 'ID':
-        setFilteredData(data.filter((item) => item.monster_id_jp.toString() === searchTerm));
+        setFilteredData(data.filter((item) => (item.monster_id_jp ?? item.monster_id_na).toString() === searchTerm));
         break;
       case 'Name':
         if (onEnterKeyDown) setFilteredData(data.filter((item) => item.name_en.toLowerCase().includes(searchTerm)));
@@ -92,8 +92,8 @@ const MonsterTable = ({ data }) => {
           </TableHead>
           <TableBody>
             {filteredData.map((row) => (
-              <TableRow key={row.monster_id_jp}>
-                <TableCell style={{backgroundColor: 'inherit', color: 'inherit', borderColor: 'inherit'}}>{row.monster_id_jp}</TableCell>
+              <TableRow key={row.monster_id_jp ?? row.monster_id_na}>
+                <TableCell style={{backgroundColor: 'inherit', color: 'inherit', borderColor: 'inherit'}}>{row.monster_id_jp ?? row.monster_id_na}</TableCell>
                 <TableCell style={{backgroundColor: 'inherit', color: 'inherit', borderColor: 'inherit'}}>{row.name_en}</TableCell>
                 <TableCell style={{whiteSpace: 'nowrap', backgroundColor: 'inherit', color: 'inherit', borderColor: 'inherit'}}>{`${row.hp_max} / ${row.hp_max} / ${row.rcv_max}`}</TableCell>
                 <TableCell style={{backgroundColor: 'inherit', color: 'inherit', borderColor: 'inherit'}}>{row.active_skill_desc_en}</TableCell>

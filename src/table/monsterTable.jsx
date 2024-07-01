@@ -95,7 +95,7 @@ const MonsterTable = ({ data }) => {
               <TableRow key={row.monster_id_jp ?? row.monster_id_na}>
                 <TableCell style={{backgroundColor: 'inherit', color: 'inherit', borderColor: 'inherit'}}>{row.monster_id_jp ?? row.monster_id_na}</TableCell>
                 <TableCell style={{backgroundColor: 'inherit', color: 'inherit', borderColor: 'inherit'}}>{row.name_en}</TableCell>
-                <TableCell style={{whiteSpace: 'nowrap', backgroundColor: 'inherit', color: 'inherit', borderColor: 'inherit'}}>{`${row.hp_max} / ${row.hp_max} / ${row.rcv_max}`}</TableCell>
+                <TableCell style={{whiteSpace: 'nowrap', backgroundColor: 'inherit', color: 'inherit', borderColor: 'inherit'}}>{`${row.hp_max} / ${row.atk_max} / ${row.rcv_max}`}</TableCell>
                 <TableCell style={{backgroundColor: 'inherit', color: 'inherit', borderColor: 'inherit'}}>{row.active_skill_desc_en}</TableCell>
                 <TableCell style={{whiteSpace: 'nowrap', backgroundColor: 'inherit', color: 'inherit', borderColor: 'inherit'}}>{`${row.turn_min} - ${row.turn_max}`}</TableCell>
                 <TableCell style={{backgroundColor: 'inherit', color: 'inherit', borderColor: 'inherit'}}>{row.leader_skill_desc_en}</TableCell>

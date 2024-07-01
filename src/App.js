@@ -1,17 +1,22 @@
 import './App.css';
 import MonsterTable from './table/monsterTable';
 import monsterDatas from './data.json';
-import { useEffect } from 'react';
+import { useState } from 'react';
+import Header from './header/headerToggle';
 
-function App() {
-  useEffect(() => {
-    document.title = 'PDQ - P&D Quicksearch';
-  }, []);
+const App = () => {
+  const [mode, setMode] = useState(false); // Mặc định dark mode là true
+
+  const changeColorMode = () => {
+    setMode(!mode);
+  };
+
   return (
-    <div className="App">
-      <MonsterTable data={monsterDatas}/>
+    <div className={`App ${mode ? 'DarkMode' : 'LightMode'}`}>
+      <Header darkMode={mode} callbackChangeMode={changeColorMode} />
+      <MonsterTable data={monsterDatas.slice().reverse()} />
     </div>
   );
-}
+};
 
 export default App;

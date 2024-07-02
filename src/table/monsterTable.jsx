@@ -17,7 +17,7 @@ const MonsterTable = ({ data }) => {
   if (searchTerm !== '') {
     switch (searchType) {
       case 'ID':
-        setFilteredData(data.filter((item) => (item.monster_id_jp ?? item.monster_id_na).toString() === searchTerm));
+        setFilteredData(data.filter((item) => (item.monster_id_jp ?? item.monster_id_na ?? 0).toString() === searchTerm));
         break;
       case 'Name':
         if (onEnterKeyDown) setFilteredData(data.filter((item) => item.name_en.toLowerCase().includes(searchTerm)));

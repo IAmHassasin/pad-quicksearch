@@ -352,7 +352,7 @@ const MonsterTable = ({ data }) => {
                       borderColor: "inherit",
                     }}
                   >
-                    {row.super_awakenings
+                    {row.super_awakenings.length !== 0 ? row.super_awakenings
                       .replace(/[()]/g, "")
                       .split(",")
                       .map((element, index) => (
@@ -373,7 +373,7 @@ const MonsterTable = ({ data }) => {
                             style={{ marginRight: "10px" }}
                           />
                         </Tooltip>
-                      ))}
+                      )) : <></>}
                   </TableCell>
                 </TableRow>
               </React.Fragment>

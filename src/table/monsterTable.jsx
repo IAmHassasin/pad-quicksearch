@@ -286,7 +286,7 @@ const MonsterTable = ({ data }) => {
                       row.attribute_2_id,
                       row.attribute_3_id,
                     ].map((element, index) =>
-                      (element === null || element === 6) ? (
+                      (element === null || element.toString() === '6') ? (
                         <img
                           key={index}
                           src={`./NULL.png`}

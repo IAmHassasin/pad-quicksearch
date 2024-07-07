@@ -314,7 +314,7 @@ const MonsterTable = ({ data }) => {
                     )}
                   </TableCell>
                   <TableCell
-                    colSpan={4}
+                    colSpan={2}
                     style={{
                       backgroundColor: "inherit",
                       color: "inherit",
@@ -322,6 +322,37 @@ const MonsterTable = ({ data }) => {
                     }}
                   >
                     {row.awakenings
+                      .replace(/[()]/g, "")
+                      .split(",")
+                      .map((element, index) => (
+                        <Tooltip
+                          key={index}
+                          title={
+                            awokenSkills.find(
+                              (awkSkill) =>
+                                awkSkill.awoken_skill_id.toString() === element
+                            )?.desc_en ?? 'Unknown'
+                          }
+                          placement="top"
+                        >
+                          <img
+                            key={index}
+                            src={`https://pad.protic.site/wp-content/uploads/pad-awks/${element.trim()}.png`}
+                            alt={`awk_${element}`}
+                            style={{ marginRight: "10px" }}
+                          />
+                        </Tooltip>
+                      ))}
+                  </TableCell>
+                  <TableCell
+                    colSpan={2}
+                    style={{
+                      backgroundColor: "inherit",
+                      color: "inherit",
+                      borderColor: "inherit",
+                    }}
+                  >
+                    {row.super_awakenings
                       .replace(/[()]/g, "")
                       .split(",")
                       .map((element, index) => (

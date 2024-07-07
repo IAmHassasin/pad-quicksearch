@@ -43,7 +43,7 @@ export default function PasswordDialog({ callbackCheckPassword }) {
           },
         }}
       >
-        <DialogTitle>Subscribe</DialogTitle>
+        <DialogTitle>Login Dialog</DialogTitle>
         <DialogContent>
           <DialogContentText>
             Please enter password.

@@ -52,7 +52,7 @@ const MonsterTable = ({ data }) => {
           if (onEnterKeyDown)
             setFilteredData(
               data.filter((item) =>
-                item.active_skill_desc_en.toLowerCase().includes(searchTerm)
+                !item.active_skill_desc_en && item.active_skill_desc_en.toLowerCase().includes(searchTerm)
               )
             );
           break;
@@ -60,7 +60,7 @@ const MonsterTable = ({ data }) => {
           if (onEnterKeyDown)
             setFilteredData(
               data.filter((item) =>
-                item.leader_skill_desc_en.toLowerCase().includes(searchTerm)
+                !item.leader_skill_desc_en && item.leader_skill_desc_en.toLowerCase().includes(searchTerm)
               )
             );
           break;

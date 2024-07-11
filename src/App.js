@@ -10,6 +10,9 @@ const App = () => {
 
   const [passwordCheck, setPasswordCheck] = useState(false);
 
+  // number[] | boolean
+  const [compareCard, setCompareCard] = useState(false);
+
   const changeColorMode = () => {
     setMode(!mode);
   };
@@ -18,12 +21,20 @@ const App = () => {
     setPasswordCheck(true);
   }
 
+  const popupCompareDialog = () => {
+    compareCard ? setCompareCard(false) : setCompareCard(true);
+  }
+
   return (
     <>
-    <PasswordDialog callbackCheckPassword={checkPassword}></PasswordDialog>
+      <PasswordDialog callbackCheckPassword={checkPassword}></PasswordDialog>
       {passwordCheck ? (
         <div className={`App ${mode ? "DarkMode" : "LightMode"}`}>
-          <Header darkMode={mode} callbackChangeMode={changeColorMode} />
+          <Header
+            darkMode={mode}
+            callbackChangeMode={changeColorMode}
+            callbackComparePopup={popupCompareDialog}
+          />
           <MonsterTable data={monsterDatas.slice().reverse()} />
         </div>
       ) : (

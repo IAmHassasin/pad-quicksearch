@@ -389,8 +389,8 @@ const MonsterTable = ({ data }) => {
                       (element === null || element.toString() === '6') ? (
                         <img
                           key={index}
-                          // src={`./NULL.png`}
-                          src={`./pad-quicksearch/NULL.png`}
+                          src={`./NULL.png`}
+                          // src={`./pad-quicksearch/NULL.png`}
                           alt={`awk_${element}`}
                           style={{
                             width: "31px",

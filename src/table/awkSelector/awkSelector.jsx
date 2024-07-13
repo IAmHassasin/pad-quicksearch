@@ -58,19 +58,19 @@ const AwokenSelector = ({ setSelectedAwokens }) => {
     }));
   };
 
-  const handleSelectedAwokenClick = (image) => {
+  const handleSelectedAwokenClick = (awkId) => {
     setAwokenCount((prev) => {
-      const newCount = (prev[image] || 0) - 1;
+      const newCount = (prev[awkId] || 0) - 1;
       if (newCount <= 0) {
-        delete prev[image];
+        delete prev[awkId];
         return { ...prev };
       }
-      return { ...prev, [image]: newCount };
+      return { ...prev, [awkId]: newCount };
     });
 
     setSelectedAwokens((prev) => {
       const newArray = [...prev];
-      const index = newArray.indexOf(image);
+      const index = newArray.indexOf(Number(awkId));
       if (index !== -1) newArray.splice(index, 1);
       return newArray;
     });

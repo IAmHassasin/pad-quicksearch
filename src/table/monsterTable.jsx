@@ -15,6 +15,87 @@ import {
   Tooltip,
 } from "@mui/material";
 import awokenSkills from "../awoken_skills.json";
+import AwokenSelector from "./awkSelector/awkSelector";
+
+/**
+ * format array of awoken, taken from DB, to an array of awoken IDs
+ * 
+ * (parseAwks: false) "(49),(91),(111)" => ['49','91','46']
+ * 
+ * (parseAwks: true) "(49),(91),(111)" => ['49','91','61','61'] (111 is 10+ Combo awk = 2 10 combo awk)
+ * @param {String} awokenString 
+ * @param {Boolean} parseAwks 
+ */
+const reformatAwokensList = (awokenString, parseAwks) => {
+  if (awokenString === '' || awokenString === null) return [];
+  const parseAwoken = {
+    '52': '10,10',
+    '53': '19,19',
+    '56': '21,21',
+    '68': '11,11,11,11,11',
+    '69': '12,12,12,12,12',
+    '70': '13,13,13,13,13',
+    '96': '27,27',
+    '97': '51,51',
+    '98': '9,9',
+    '99': '14,14',
+    '100': '15,15',
+    '101': '16,16',
+    '102': '17,17',
+    '103': '18,18',
+    '104': '19,19',
+    '107': '43,43',
+    '108': '60,60',
+    '109': '48,48',
+    '110': '78,78',
+    '111': '61,61',
+    '112': '79,79',
+    '113': '80,80',
+    '114': '81,81',
+    '115': '20,20',
+    '116': '22,22,22',
+    '117': '23,23,23',
+    '118': '24,24,24',
+    '119': '25,25,25',
+    '120': '26,26,26',
+    '121': '73,73',
+    '122': '74,74',
+    '123': '75,75',
+    '124': '76,76',
+    '125': '77,77',
+  }
+  let awokenList = awokenString.replace(/[()]/g, "");
+  // parseAwoken
+  if (parseAwks) {
+    Object.keys(parseAwoken).forEach(awk => {
+      awokenList = awokenList.replace(`${awk}`, `${parseAwoken[awk]}`);
+    })
+  }
+  // split
+  awokenList = awokenList.split(",");
+  return awokenList;
+}
+/**
+ * This function checks if all elements in array A are in array B
+ * @param {string[]} A 
+ * @param {string[]} B 
+ * @returns true if all elements in A are in B, false otherwise
+ */
+const areAllElementsInArray = (A, B) => {
+  const countOccurrences = (arr) => {
+    return arr.reduce((acc, val) => {
+      acc[val] = (acc[val] || 0) + 1;
+      return acc;
+    }, {});
+  };
+
+  const countA = countOccurrences(A);
+  const countB = countOccurrences(B);
+
+  return Object.keys(countA).every(key => countA[key] <= (countB[key] || 0));
+}
+// Maximum number of monsters to display
+const maximumDisplay = 20;
 
 const MonsterTable = ({ data }) => {
   const allowedSearchTypes = ["ID", "Name", "Active Skill", "Leader Skill"]; // Add more search types if needed
@@ -22,7 +103,9 @@ const MonsterTable = ({ data }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchType, setSearchType] = useState("ID"); // Default search type
   const [onEnterKeyDown, setEnterKeyDown] = useState(false);
-  const [filteredData, setFilteredData] = useState(data.slice(0, 20));
+  const [filteredData, setFilteredData] = useState(data.slice(0, maximumDisplay));
+
+  const [selectedAwokens, setSelectedAwokens] = useState([]);
 
   useEffect(() => {
     setSearchTerm("");
@@ -70,6 +153,25 @@ const MonsterTable = ({ data }) => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchTerm, onEnterKeyDown, searchType]);
+  useEffect(() => {
+    // Filter function based on selectedAwokens
+    if (selectedAwokens.length > 0) {
+      const filteredDatas = [];
+      for (let index = 0; index < data.length; index++) {
+        if (filteredDatas.length === maximumDisplay) break;
+        const parsedData = reformatAwokensList(data[index].awakenings, true);
+        const parsedSelectedAwokens = reformatAwokensList(
+          selectedAwokens.toString(),
+          true
+        );
+        if (areAllElementsInArray(parsedSelectedAwokens, parsedData)) {
+          filteredDatas.push(data[index]);
+        }
+      }
+      setFilteredData(filteredDatas);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedAwokens])
 
   return (
     <div>
@@ -120,6 +222,7 @@ const MonsterTable = ({ data }) => {
             ),
           }}
         />
+        <AwokenSelector setSelectedAwokens={setSelectedAwokens}/>
       </FormControl>
 
       {/* Table */}
@@ -209,11 +312,6 @@ const MonsterTable = ({ data }) => {
             {filteredData.map((row) => (
               <React.Fragment
                 key={row.id}
-                style={{
-                  backgroundColor: "inherit",
-                  color: "inherit",
-                  borderColor: "inherit",
-                }}
               >
                 <TableRow key={row.monster_id_jp ?? row.monster_id_na}>
                   <TableCell
@@ -264,6 +362,7 @@ const MonsterTable = ({ data }) => {
                   </TableCell>
                 </TableRow>
                 <TableRow>
+                  {/* empty  */}
                   <TableCell
                     colSpan={1}
                     style={{
@@ -272,6 +371,7 @@ const MonsterTable = ({ data }) => {
                       borderColor: "inherit",
                     }}
                   />
+                  {/* attribute */}
                   <TableCell
                     colSpan={1}
                     style={{
@@ -289,7 +389,8 @@ const MonsterTable = ({ data }) => {
                       (element === null || element.toString() === '6') ? (
                         <img
                           key={index}
-                          src={`./NULL.png`}
+                          // src={`./NULL.png`}
+                          src={`./pad-quicksearch/NULL.png`}
                           alt={`awk_${element}`}
                           style={{
                             width: "31px",
@@ -313,6 +414,7 @@ const MonsterTable = ({ data }) => {
                       )
                     )}
                   </TableCell>
+                  {/* awoken */}
                   <TableCell
                     colSpan={2}
                     style={{
@@ -321,9 +423,7 @@ const MonsterTable = ({ data }) => {
                       borderColor: "inherit",
                     }}
                   >
-                    {row.awakenings
-                      .replace(/[()]/g, "")
-                      .split(",")
+                    {reformatAwokensList(row.awakenings, false)
                       .map((element, index) => (
                         <Tooltip
                           key={index}
@@ -344,6 +444,7 @@ const MonsterTable = ({ data }) => {
                         </Tooltip>
                       ))}
                   </TableCell>
+                  {/* super awoken */}
                   <TableCell
                     colSpan={2}
                     style={{

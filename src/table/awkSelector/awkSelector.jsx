@@ -10,13 +10,37 @@ import {
 } from "@mui/material";
 import { FilterAlt } from "@mui/icons-material";
 
+const awkGroup1 = [49, 10, 52, 83, 84, 85, 86, 87, 88, 89, 90];
+const awkGroup2 = [21, 56, 105, 51, 98, 59, 91, 92, 93, 94, 95];
+const awkGroup3 = [22, 23, 24, 25, 26, 29, 116, 117, 118, 119, 120];
+const awkGroup4 = [28, 54, 55, 11, 12, 13, 68, 69, 70];
+const awkGroup5 = [46, 47, 45, 50, 30, 64, 20, 115];
+const awkGroup6 = [43, 61, 107, 111, 27, 96, 57, 58, 60, 78, 126, 108, 110];
+const awkGroup7 = [73, 74, 75, 76, 77, 121, 122, 123, 124, 125, 82, 62];
+const awkGroup8 = [44, 79, 80, 81, 112, 113, 114, 48, 109];
+const awkGroup9 = [14, 15, 16, 17, 18, 19, 53, 99, 100, 101, 102, 103, 104];
+const awkGroup10 = [31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42];
+const awkGroup11 = [1, 2, 3, 65, 66, 67, 4, 5, 6, 7, 8, 9, 97];
+const awkGroup12 = [106, 63, 127, 128, 129, 130];
+
+const awkGroups = [awkGroup1, awkGroup2, awkGroup3, awkGroup4, awkGroup5, awkGroup6, awkGroup7, awkGroup8, awkGroup9, awkGroup10, awkGroup11, awkGroup12];
+
+// PriorityMap
+const priorityMap = awkGroups.flat().reduce((acc, item, index) => {
+  acc[item] = index;
+  return acc;
+}, {});
+
+// Sort func
+const sortByAwkGroup = (awkArray) => {
+  return awkArray.sort((a, b) => (priorityMap[a] ?? Infinity) - (priorityMap[b] ?? Infinity));
+};
+
 const AwokenSelector = ({ setSelectedAwokens }) => {
   const [open, setOpen] = useState(false);
   const [awokenCount, setAwokenCount] = useState({});
 
   const [darkMode, setDarkMode] = useState(false);
-
-  const awokenTotal = 130;
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -27,7 +51,7 @@ const AwokenSelector = ({ setSelectedAwokens }) => {
   };
 
   const handleAwokenClick = (awokenId) => {
-    setSelectedAwokens((prev) => [...prev, awokenId]);
+    setSelectedAwokens((prev) => sortByAwkGroup([...prev, awokenId]));
     setAwokenCount((prev) => ({
       ...prev,
       [awokenId]: (prev[awokenId] || 0) + 1,
@@ -85,7 +109,7 @@ const AwokenSelector = ({ setSelectedAwokens }) => {
             <Button onClick={handleClickOpen}>
               <FilterAlt />
             </Button>
-            {Object.keys(awokenCount).map((awokenID) => (
+            {sortByAwkGroup(Object.keys(awokenCount)).map((awokenID) => (
               <Grid item key={awokenID}>
                 <Badge
                   badgeContent={
@@ -110,12 +134,16 @@ const AwokenSelector = ({ setSelectedAwokens }) => {
         </Grid>
       </Grid>
       {/* Main Dialog */}
-      <Dialog open={open} onClose={handleClose} PaperProps={{
-        sx: {
-            backgroundColor: darkMode ? '#121212' : 'white',
-            color: darkMode ? 'white' : 'black',
-        }
-      }}>
+      <Dialog
+        open={open}
+        onClose={handleClose}
+        PaperProps={{
+          sx: {
+            backgroundColor: darkMode ? "#121212" : "white",
+            color: darkMode ? "white" : "black",
+          },
+        }}
+      >
         <DialogTitle>Select Awoken</DialogTitle>
         <DialogContent>
           <Grid container spacing={2}>
@@ -129,7 +157,7 @@ const AwokenSelector = ({ setSelectedAwokens }) => {
                   borderRadius: "5px",
                 }}
               >
-                {Object.keys(awokenCount).map((awokenID) => (
+                {sortByAwkGroup(Object.keys(awokenCount)).map((awokenID) => (
                   <Grid item key={awokenID}>
                     <Badge
                       badgeContent={
@@ -154,17 +182,18 @@ const AwokenSelector = ({ setSelectedAwokens }) => {
             </Grid>
             <Grid item xs={12}>
               <Grid container spacing={1}>
-                {[...Array(awokenTotal).keys()].map((index) => (
-                  <Grid item key={index}>
-                    <img
-                      // need + 1 cause keys start from 0
-                      src={`https://pad.protic.site/wp-content/uploads/pad-awks/${
-                        index + 1
-                      }.png`}
-                      alt={`awk_${index}`}
-                      style={{ cursor: "pointer" }}
-                      onClick={() => handleAwokenClick(index + 1)}
-                    />
+                {awkGroups.map((group, groupIndex) => (
+                  <Grid container item spacing={1} key={groupIndex}>
+                    {group.map((awkId, index) => (
+                      <Grid item key={index}>
+                        <img
+                          src={`https://pad.protic.site/wp-content/uploads/pad-awks/${awkId}.png`}
+                          alt={`awk_${index}`}
+                          style={{ cursor: "pointer" }}
+                          onClick={() => handleAwokenClick(awkId)}
+                        />
+                      </Grid>
+                    ))}
                   </Grid>
                 ))}
               </Grid>

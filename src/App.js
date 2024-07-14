@@ -4,6 +4,7 @@ import monsterDatas from './data.json';
 import { useState } from 'react';
 import Header from './header/headerToggle';
 import PasswordDialog from './login/PasswordDialog';
+import DonationButton from './donationButton/donationButton';
 
 const mergedData = (data) => {
   const dataTemp = data.slice();
@@ -47,6 +48,7 @@ const App = () => {
       <div className={`App ${mode ? "DarkMode" : "LightMode"}`}>
         <Header darkMode={mode} callbackChangeMode={changeColorMode} />
         <MonsterTable data={mergedData(monsterDatas).slice().reverse()} />
+        <DonationButton />
       </div>
       {/* <PasswordDialog callbackCheckPassword={checkPassword}></PasswordDialog>
       {passwordCheck && passwordRequired ? (

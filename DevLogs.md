@@ -34,3 +34,9 @@ So i used "existed" resources. Also set a password to limit who can access my si
 I done quite a lots work today, i added "icons", did a little refactor and tried to use authen func of Auth0, but i figured out that just using hashed password will be enough 🤣
 
 Currently, site is quite done. It need improve search function. I'm still try to find most optimize way for this. 
+
+Hi, today is 14/7, so a week from last note, i'm quite busy with my work, cause i just moved into a new project, it's quite fun. Now is 00:07 AM. Site was updated with awk filter function. Also i group awks into something might be quicker to find. Also do a little trick with display in order and learnt few new things.
+
+My next target will be Collab Filter, which i believed will not take long, after i finish few runs in UN6, such a good drops LOL
+
+Well, today is 14/7, around 6PM. I finish filter by collab, there're some changes in DB structure, which made SQL quite hard to handle, so i move that step into FE, make prog a little slower when load, but i think that's okay, at least till in figure out a way to handle in SQL side LOL

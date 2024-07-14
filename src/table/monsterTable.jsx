@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+
+import React, { useEffect, useRef, useState } from "react";
 import {
   Table,
   TableBody,
@@ -13,12 +15,16 @@ import {
   Select,
   MenuItem,
   Tooltip,
+  List,
+  Typography,
+  ListItemButton,
 } from "@mui/material";
 import awokenSkills from "../awoken_skills.json";
 import AwokenSelector from "./awkSelector/awkSelector";
+import seriesDatas from '../series.json';
 
 /**
- * format array of awoken, taken from DB, to an array of awoken IDs
+ * Format array of awoken, taken from DB, to an array of awoken IDs
  * 
  * (parseAwks: false) "(49),(91),(111)" => ['49','91','46']
  * 
@@ -98,17 +104,35 @@ const areAllElementsInArray = (A, B) => {
 const maximumDisplay = 20;
 
 const MonsterTable = ({ data }) => {
-  const allowedSearchTypes = ["ID", "Name", "Active Skill", "Leader Skill"]; // Add more search types if needed
+  const allowedSearchTypes = ["ID", "Name", "Active Skill", "Leader Skill", "Collab"]; // Add more search types if needed
 
   const [searchTerm, setSearchTerm] = useState("");
   const [searchType, setSearchType] = useState("ID"); // Default search type
   const [onEnterKeyDown, setEnterKeyDown] = useState(false);
+  const [onFocus, setFocus] = useState(false);
   const [filteredData, setFilteredData] = useState(data.slice(0, maximumDisplay));
 
   const [selectedAwokens, setSelectedAwokens] = useState([]);
 
+  const [suggestionCollab, setSuggestionCollab] = useState(seriesDatas);
+  const suggestionsRef = useRef(null);
+
+  const handleSuggestionClick = (suggestion) => {
+    setSuggestionCollab([suggestion]);
+    setSearchTerm(suggestion.name_en);
+    setFocus(false);
+    setFilteredData(data.filter((item) => item.series_id === suggestion.series_id));
+  }
+
+  const handleClickOutsidePaper = (event) => {
+    if (suggestionsRef.current && !suggestionsRef.current.contains(event.target)) {
+      setFocus(false);
+    }
+  };
+
   useEffect(() => {
     setSearchTerm("");
+    setFilteredData(data.slice(0, maximumDisplay));
   }, [searchType]);
   useEffect(() => {
     // Filter function based on monster_id_jp and name_en
@@ -147,11 +171,18 @@ const MonsterTable = ({ data }) => {
               )
             );
           break;
+        case "Collab":
+          // Filter function based on series name
+          setSuggestionCollab(
+            seriesDatas.filter((item) =>
+              item.name_en.toLowerCase().includes(searchTerm.toLowerCase())
+            )
+          );
+          break;
         default:
           break;
       }
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchTerm, onEnterKeyDown, searchType]);
   useEffect(() => {
     // Filter function based on selectedAwokens
@@ -172,6 +203,13 @@ const MonsterTable = ({ data }) => {
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedAwokens])
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutsidePaper);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutsidePaper);
+    };
+  }, []);
 
   return (
     <div>
@@ -201,6 +239,7 @@ const MonsterTable = ({ data }) => {
               setEnterKeyDown(false);
             }
           }}
+          onFocus={() => setFocus(true)}
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">
@@ -222,7 +261,33 @@ const MonsterTable = ({ data }) => {
             ),
           }}
         />
-        <AwokenSelector setSelectedAwokens={setSelectedAwokens}/>
+        <AwokenSelector setSelectedAwokens={setSelectedAwokens} />
+        {searchType === "Collab" && searchTerm !== "" && onFocus && (
+          <Paper
+            elevation={3}
+            style={{
+              position: "absolute",
+              zIndex: 1,
+              width: "300px",
+              top: "100%",
+            }}
+            ref={suggestionsRef}
+          >
+            <List>
+              {(suggestionCollab.length > maximumDisplay
+                ? suggestionCollab.slice(-1 * maximumDisplay)
+                : suggestionCollab
+              ).map((suggestion) => (
+                <ListItemButton
+                  key={suggestion.series_id}
+                  onClick={() => handleSuggestionClick(suggestion)}
+                >
+                  <Typography variant="body1">{suggestion.name_en}</Typography>
+                </ListItemButton>
+              ))}
+            </List>
+          </Paper>
+        )}
       </FormControl>
 
       {/* Table */}
@@ -310,9 +375,7 @@ const MonsterTable = ({ data }) => {
           </TableHead>
           <TableBody>
             {filteredData.map((row) => (
-              <React.Fragment
-                key={row.id}
-              >
+              <React.Fragment key={row.id}>
                 <TableRow key={row.monster_id_jp ?? row.monster_id_na}>
                   <TableCell
                     style={{
@@ -386,7 +449,7 @@ const MonsterTable = ({ data }) => {
                       row.attribute_2_id,
                       row.attribute_3_id,
                     ].map((element, index) =>
-                      (element === null || element.toString() === '6') ? (
+                      element === null || element.toString() === "6" ? (
                         <img
                           key={index}
                           src={`./NULL.png`}
@@ -423,15 +486,15 @@ const MonsterTable = ({ data }) => {
                       borderColor: "inherit",
                     }}
                   >
-                    {reformatAwokensList(row.awakenings, false)
-                      .map((element, index) => (
+                    {reformatAwokensList(row.awakenings, false).map(
+                      (element, index) => (
                         <Tooltip
                           key={index}
                           title={
                             awokenSkills.find(
                               (awkSkill) =>
                                 awkSkill.awoken_skill_id.toString() === element
-                            )?.desc_en ?? 'Unknown'
+                            )?.desc_en ?? "Unknown"
                           }
                           placement="top"
                         >
@@ -442,7 +505,8 @@ const MonsterTable = ({ data }) => {
                             style={{ marginRight: "10px" }}
                           />
                         </Tooltip>
-                      ))}
+                      )
+                    )}
                   </TableCell>
                   {/* super awoken */}
                   <TableCell
@@ -453,28 +517,33 @@ const MonsterTable = ({ data }) => {
                       borderColor: "inherit",
                     }}
                   >
-                    {row.super_awakenings.length !== 0 ? row.super_awakenings
-                      .replace(/[()]/g, "")
-                      .split(",")
-                      .map((element, index) => (
-                        <Tooltip
-                          key={index}
-                          title={
-                            awokenSkills.find(
-                              (awkSkill) =>
-                                awkSkill.awoken_skill_id.toString() === element
-                            )?.desc_en ?? 'Unknown'
-                          }
-                          placement="top"
-                        >
-                          <img
+                    {row.super_awakenings.length !== 0 ? (
+                      row.super_awakenings
+                        .replace(/[()]/g, "")
+                        .split(",")
+                        .map((element, index) => (
+                          <Tooltip
                             key={index}
-                            src={`https://pad.protic.site/wp-content/uploads/pad-awks/${element.trim()}.png`}
-                            alt={`awk_${element}`}
-                            style={{ marginRight: "10px" }}
-                          />
-                        </Tooltip>
-                      )) : <></>}
+                            title={
+                              awokenSkills.find(
+                                (awkSkill) =>
+                                  awkSkill.awoken_skill_id.toString() ===
+                                  element
+                              )?.desc_en ?? "Unknown"
+                            }
+                            placement="top"
+                          >
+                            <img
+                              key={index}
+                              src={`https://pad.protic.site/wp-content/uploads/pad-awks/${element.trim()}.png`}
+                              alt={`awk_${element}`}
+                              style={{ marginRight: "10px" }}
+                            />
+                          </Tooltip>
+                        ))
+                    ) : (
+                      <></>
+                    )}
                   </TableCell>
                 </TableRow>
               </React.Fragment>

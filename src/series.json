@@ -1,0 +1,1130 @@
+[
+  {
+    "series_id": 0,
+    "name_en": "Unsorted"
+  },
+  {
+    "series_id": 1,
+    "name_en": "Starter Dragon"
+  },
+  {
+    "series_id": 2,
+    "name_en": "Ripper Dragon"
+  },
+  {
+    "series_id": 3,
+    "name_en": "Slime"
+  },
+  {
+    "series_id": 4,
+    "name_en": "Carbuncle"
+  },
+  {
+    "series_id": 5,
+    "name_en": "Goblin"
+  },
+  {
+    "series_id": 6,
+    "name_en": "Ogre"
+  },
+  {
+    "series_id": 7,
+    "name_en": "Knight"
+  },
+  {
+    "series_id": 8,
+    "name_en": "Golem"
+  },
+  {
+    "series_id": 9,
+    "name_en": "Healer Girl"
+  },
+  {
+    "series_id": 10,
+    "name_en": "Mystic Knight"
+  },
+  {
+    "series_id": 11,
+    "name_en": "Attack Stance"
+  },
+  {
+    "series_id": 12,
+    "name_en": "Late Bloomer Dragon"
+  },
+  {
+    "series_id": 13,
+    "name_en": "Greco-Roman God"
+  },
+  {
+    "series_id": 14,
+    "name_en": "Japanese God"
+  },
+  {
+    "series_id": 15,
+    "name_en": "Legendary Dragon"
+  },
+  {
+    "series_id": 16,
+    "name_en": "Evo Material"
+  },
+  {
+    "series_id": 20,
+    "name_en": "Metal Dragon"
+  },
+  {
+    "series_id": 21,
+    "name_en": "Poring"
+  },
+  {
+    "series_id": 22,
+    "name_en": "Descended"
+  },
+  {
+    "series_id": 23,
+    "name_en": "Devil Mob"
+  },
+  {
+    "series_id": 24,
+    "name_en": "Sky Dragon"
+  },
+  {
+    "series_id": 25,
+    "name_en": "Special Gift"
+  },
+  {
+    "series_id": 26,
+    "name_en": "Indian God"
+  },
+  {
+    "series_id": 27,
+    "name_en": "Chimera"
+  },
+  {
+    "series_id": 28,
+    "name_en": "Taiko no Tatsujin Collab"
+  },
+  {
+    "series_id": 29,
+    "name_en": "Mech Dragon"
+  },
+  {
+    "series_id": 30,
+    "name_en": "Toy Dragon"
+  },
+  {
+    "series_id": 31,
+    "name_en": "Pengdra"
+  },
+  {
+    "series_id": 32,
+    "name_en": "ECO Collab"
+  },
+  {
+    "series_id": 33,
+    "name_en": "Elemental"
+  },
+  {
+    "series_id": 34,
+    "name_en": "GodFest Exclusive"
+  },
+  {
+    "series_id": 35,
+    "name_en": "Norse God"
+  },
+  {
+    "series_id": 36,
+    "name_en": "Rider"
+  },
+  {
+    "series_id": 37,
+    "name_en": "Mythical Beast"
+  },
+  {
+    "series_id": 38,
+    "name_en": "Pink REM"
+  },
+  {
+    "series_id": 39,
+    "name_en": "Gunma Collab"
+  },
+  {
+    "series_id": 40,
+    "name_en": "Ancient Dragon"
+  },
+  {
+    "series_id": 41,
+    "name_en": "CD Collab"
+  },
+  {
+    "series_id": 43,
+    "name_en": "Egyptian God"
+  },
+  {
+    "series_id": 44,
+    "name_en": "Princess Punt Collab"
+  },
+  {
+    "series_id": 45,
+    "name_en": "Snow Globe Dragon"
+  },
+  {
+    "series_id": 46,
+    "name_en": "Moltdra"
+  },
+  {
+    "series_id": 47,
+    "name_en": "Samurai Dragon"
+  },
+  {
+    "series_id": 48,
+    "name_en": "Sengoku Ninja"
+  },
+  {
+    "series_id": 50,
+    "name_en": "Greco-Roman God II"
+  },
+  {
+    "series_id": 51,
+    "name_en": "Fey"
+  },
+  {
+    "series_id": 53,
+    "name_en": "Capybara-san Collab"
+  },
+  {
+    "series_id": 54,
+    "name_en": "Archangel"
+  },
+  {
+    "series_id": 55,
+    "name_en": "Archdemon"
+  },
+  {
+    "series_id": 57,
+    "name_en": "Monster Exchange"
+  },
+  {
+    "series_id": 58,
+    "name_en": "Gungho Collab"
+  },
+  {
+    "series_id": 60,
+    "name_en": "Shinra Bansho Collab"
+  },
+  {
+    "series_id": 61,
+    "name_en": "Evangelion Collab"
+  },
+  {
+    "series_id": 62,
+    "name_en": "Japanese Myth"
+  },
+  {
+    "series_id": 63,
+    "name_en": "Clash of Clans Dungeon"
+  },
+  {
+    "series_id": 64,
+    "name_en": "Stone Dragon"
+  },
+  {
+    "series_id": 65,
+    "name_en": "Chinese God"
+  },
+  {
+    "series_id": 66,
+    "name_en": "GROOVE COASTER Collab"
+  },
+  {
+    "series_id": 67,
+    "name_en": "Mystic Dragon"
+  },
+  {
+    "series_id": 68,
+    "name_en": "Japanese God II"
+  },
+  {
+    "series_id": 69,
+    "name_en": "Ragnarok Odyssey Ace Collab"
+  },
+  {
+    "series_id": 70,
+    "name_en": "Takaoka City Collab"
+  },
+  {
+    "series_id": 71,
+    "name_en": "DDQ Collab"
+  },
+  {
+    "series_id": 72,
+    "name_en": "Monster Hunter 4G Collab"
+  },
+  {
+    "series_id": 74,
+    "name_en": "Batman Collab"
+  },
+  {
+    "series_id": 75,
+    "name_en": "Baskin-Robbins Collab"
+  },
+  {
+    "series_id": 76,
+    "name_en": "Angry Birds Collab"
+  },
+  {
+    "series_id": 77,
+    "name_en": "Pirate Dragon"
+  },
+  {
+    "series_id": 78,
+    "name_en": "Greco-Roman Myth"
+  },
+  {
+    "series_id": 79,
+    "name_en": "Puzzle & Dragons Z Collab"
+  },
+  {
+    "series_id": 80,
+    "name_en": "Heroic God"
+  },
+  {
+    "series_id": 81,
+    "name_en": "Fruit Dragon"
+  },
+  {
+    "series_id": 82,
+    "name_en": "HUNTER×HUNTER Collab"
+  },
+  {
+    "series_id": 83,
+    "name_en": "Pirates"
+  },
+  {
+    "series_id": 84,
+    "name_en": "Hello Kitty Collab"
+  },
+  {
+    "series_id": 85,
+    "name_en": "Flower Dragon"
+  },
+  {
+    "series_id": 86,
+    "name_en": "Misc Skill Up Monsters"
+  },
+  {
+    "series_id": 87,
+    "name_en": "Number Dragons"
+  },
+  {
+    "series_id": 88,
+    "name_en": "Three Kingdoms"
+  },
+  {
+    "series_id": 89,
+    "name_en": "PAD Battle Tournament Collab"
+  },
+  {
+    "series_id": 90,
+    "name_en": "Ragnarok Online Collab"
+  },
+  {
+    "series_id": 91,
+    "name_en": "BEAMS Collab"
+  },
+  {
+    "series_id": 92,
+    "name_en": "Dragon Ball Collab"
+  },
+  {
+    "series_id": 93,
+    "name_en": "Dragon Rider Girl"
+  },
+  {
+    "series_id": 94,
+    "name_en": "Chaser"
+  },
+  {
+    "series_id": 95,
+    "name_en": "Saint Seiya Collab"
+  },
+  {
+    "series_id": 96,
+    "name_en": "Fairy Tale"
+  },
+  {
+    "series_id": 97,
+    "name_en": "Indian God II"
+  },
+  {
+    "series_id": 98,
+    "name_en": "Dragon Swordman"
+  },
+  {
+    "series_id": 99,
+    "name_en": "Bikkuriman Collab"
+  },
+  {
+    "series_id": 100,
+    "name_en": "Awoken Material"
+  },
+  {
+    "series_id": 101,
+    "name_en": "Skill Level Up"
+  },
+  {
+    "series_id": 102,
+    "name_en": "Insect Dragon"
+  },
+  {
+    "series_id": 103,
+    "name_en": "Magician"
+  },
+  {
+    "series_id": 104,
+    "name_en": "Armor Knight"
+  },
+  {
+    "series_id": 105,
+    "name_en": "Egyptian God II"
+  },
+  {
+    "series_id": 106,
+    "name_en": "Justice League"
+  },
+  {
+    "series_id": 107,
+    "name_en": "Three Kindoms Tenka Trigger"
+  },
+  {
+    "series_id": 108,
+    "name_en": "Grimoire"
+  },
+  {
+    "series_id": 109,
+    "name_en": "Christmas REM (2014)"
+  },
+  {
+    "series_id": 110,
+    "name_en": "Bowl Dragon"
+  },
+  {
+    "series_id": 111,
+    "name_en": "Weapons/Braves"
+  },
+  {
+    "series_id": 112,
+    "name_en": "Angel II"
+  },
+  {
+    "series_id": 113,
+    "name_en": "Fist of the North Star"
+  },
+  {
+    "series_id": 114,
+    "name_en": "PAD Academy"
+  },
+  {
+    "series_id": 115,
+    "name_en": "Cat Dragon"
+  },
+  {
+    "series_id": 116,
+    "name_en": "Final Fantasy Collab"
+  },
+  {
+    "series_id": 117,
+    "name_en": "GungHo Collab Pal Egg"
+  },
+  {
+    "series_id": 118,
+    "name_en": "Ghost in the Shell Collab"
+  },
+  {
+    "series_id": 119,
+    "name_en": "Duel Masters"
+  },
+  {
+    "series_id": 120,
+    "name_en": "Cyber Dragon"
+  },
+  {
+    "series_id": 121,
+    "name_en": "Cyber Beast"
+  },
+  {
+    "series_id": 122,
+    "name_en": "Utility Latent Tamadra"
+  },
+  {
+    "series_id": 123,
+    "name_en": "Samurai God"
+  },
+  {
+    "series_id": 124,
+    "name_en": "Monster Point"
+  },
+  {
+    "series_id": 125,
+    "name_en": "PAD Island"
+  },
+  {
+    "series_id": 126,
+    "name_en": "Marionette"
+  },
+  {
+    "series_id": 127,
+    "name_en": "Armor Dragon"
+  },
+  {
+    "series_id": 128,
+    "name_en": "Attack on Titan"
+  },
+  {
+    "series_id": 130,
+    "name_en": "Halloween"
+  },
+  {
+    "series_id": 131,
+    "name_en": "Ex GodFest"
+  },
+  {
+    "series_id": 132,
+    "name_en": "Constellation God"
+  },
+  {
+    "series_id": 133,
+    "name_en": "Dog Dragon"
+  },
+  {
+    "series_id": 134,
+    "name_en": "Ninja Hattori Collab"
+  },
+  {
+    "series_id": 135,
+    "name_en": "Sunday All Stars Collab"
+  },
+  {
+    "series_id": 136,
+    "name_en": "Christmas"
+  },
+  {
+    "series_id": 138,
+    "name_en": "Prehistoric Dragon"
+  },
+  {
+    "series_id": 139,
+    "name_en": "New Years"
+  },
+  {
+    "series_id": 140,
+    "name_en": "Crows x Worst Collab"
+  },
+  {
+    "series_id": 141,
+    "name_en": "Constellation God II"
+  },
+  {
+    "series_id": 142,
+    "name_en": "Iron Star Dragon"
+  },
+  {
+    "series_id": 143,
+    "name_en": "Legendary Hero"
+  },
+  {
+    "series_id": 144,
+    "name_en": "BLEACH Collab"
+  },
+  {
+    "series_id": 145,
+    "name_en": "Skill Transfer"
+  },
+  {
+    "series_id": 146,
+    "name_en": "Contract Dragon"
+  },
+  {
+    "series_id": 147,
+    "name_en": "Chibi Collection"
+  },
+  {
+    "series_id": 148,
+    "name_en": "PAD Cross Collab"
+  },
+  {
+    "series_id": 149,
+    "name_en": "June Bride"
+  },
+  {
+    "series_id": 150,
+    "name_en": "Ace Attorney 6 Collab"
+  },
+  {
+    "series_id": 151,
+    "name_en": "Dimension Dragon"
+  },
+  {
+    "series_id": 152,
+    "name_en": "Rurouni Kenshin Collab"
+  },
+  {
+    "series_id": 153,
+    "name_en": "Kinnikuman Collab"
+  },
+  {
+    "series_id": 154,
+    "name_en": "PAD Radar"
+  },
+  {
+    "series_id": 155,
+    "name_en": "Wisdom Kings"
+  },
+  {
+    "series_id": 156,
+    "name_en": "Guardian Dragon"
+  },
+  {
+    "series_id": 157,
+    "name_en": "Heroine"
+  },
+  {
+    "series_id": 158,
+    "name_en": "Nightmare Street"
+  },
+  {
+    "series_id": 159,
+    "name_en": "Three Kingdoms II"
+  },
+  {
+    "series_id": 160,
+    "name_en": "Weapons/Braves II"
+  },
+  {
+    "series_id": 161,
+    "name_en": "Wisedragon"
+  },
+  {
+    "series_id": 162,
+    "name_en": "Magazine All Stars Collab"
+  },
+  {
+    "series_id": 163,
+    "name_en": "Samurai God II"
+  },
+  {
+    "series_id": 164,
+    "name_en": "Voltron Collab"
+  },
+  {
+    "series_id": 165,
+    "name_en": "Monster Hunter Collab"
+  },
+  {
+    "series_id": 166,
+    "name_en": "Orb Dragon"
+  },
+  {
+    "series_id": 168,
+    "name_en": "Warchief Dragon"
+  },
+  {
+    "series_id": 169,
+    "name_en": "Greco-Roman God III"
+  },
+  {
+    "series_id": 170,
+    "name_en": "Awoken Assist"
+  },
+  {
+    "series_id": 171,
+    "name_en": "Dragonbound & Dragoncaller"
+  },
+  {
+    "series_id": 172,
+    "name_en": "Fullmetal Alchemist Collab"
+  },
+  {
+    "series_id": 173,
+    "name_en": "KOF Collab"
+  },
+  {
+    "series_id": 174,
+    "name_en": "Celtic God"
+  },
+  {
+    "series_id": 175,
+    "name_en": "Valentine's Day"
+  },
+  {
+    "series_id": 176,
+    "name_en": "Coloring Book"
+  },
+  {
+    "series_id": 177,
+    "name_en": "Yu Yu Hakusho Collab"
+  },
+  {
+    "series_id": 178,
+    "name_en": "Mesopotamian Gods"
+  },
+  {
+    "series_id": 179,
+    "name_en": "Persona Collab"
+  },
+  {
+    "series_id": 180,
+    "name_en": "Evolve Gem"
+  },
+  {
+    "series_id": 181,
+    "name_en": "Magic: The Gathering Collab"
+  },
+  {
+    "series_id": 182,
+    "name_en": "Power Pros Collab"
+  },
+  {
+    "series_id": 183,
+    "name_en": "Gungho Collab 2"
+  },
+  {
+    "series_id": 184,
+    "name_en": "Gintama"
+  },
+  {
+    "series_id": 185,
+    "name_en": "Sword Art Online"
+  },
+  {
+    "series_id": 186,
+    "name_en": "Kamen Rider"
+  },
+  {
+    "series_id": 187,
+    "name_en": "Samurai God III"
+  },
+  {
+    "series_id": 188,
+    "name_en": "Yokai Watch"
+  },
+  {
+    "series_id": 189,
+    "name_en": "Companion Dragon"
+  },
+  {
+    "series_id": 190,
+    "name_en": "Fate/stay night Heaven's Feel"
+  },
+  {
+    "series_id": 191,
+    "name_en": "Street Fighter V: Arcade Edition"
+  },
+  {
+    "series_id": 192,
+    "name_en": "Shaman King Collab"
+  },
+  {
+    "series_id": 193,
+    "name_en": "Power Rangers"
+  },
+  {
+    "series_id": 194,
+    "name_en": "Shinkalion"
+  },
+  {
+    "series_id": 195,
+    "name_en": "Fujimi Fantasia Collab"
+  },
+  {
+    "series_id": 196,
+    "name_en": "Story Mode"
+  },
+  {
+    "series_id": 197,
+    "name_en": "Super GodFest Exclusive"
+  },
+  {
+    "series_id": 198,
+    "name_en": "Samurai Shodown"
+  },
+  {
+    "series_id": 199,
+    "name_en": "Draconic Orchestra"
+  },
+  {
+    "series_id": 200,
+    "name_en": "McDonalds Collab"
+  },
+  {
+    "series_id": 201,
+    "name_en": "Shonen Champion"
+  },
+  {
+    "series_id": 202,
+    "name_en": "Pepper Collab"
+  },
+  {
+    "series_id": 203,
+    "name_en": "Gemstone Princess"
+  },
+  {
+    "series_id": 204,
+    "name_en": "Special Descended"
+  },
+  {
+    "series_id": 205,
+    "name_en": "Yu-Gi-Oh! Duel Monsters Collab"
+  },
+  {
+    "series_id": 206,
+    "name_en": "Miscellaneous"
+  },
+  {
+    "series_id": 207,
+    "name_en": "Special PEM"
+  },
+  {
+    "series_id": 208,
+    "name_en": "Descended Loot"
+  },
+  {
+    "series_id": 209,
+    "name_en": "Redeemable"
+  },
+  {
+    "series_id": 210,
+    "name_en": "Design Contest Monsters"
+  },
+  {
+    "series_id": 211,
+    "name_en": "Tales of Artifact Dragons"
+  },
+  {
+    "series_id": 212,
+    "name_en": "Mickey Mouse & Friends"
+  },
+  {
+    "series_id": 213,
+    "name_en": "Devil May Cry"
+  },
+  {
+    "series_id": 214,
+    "name_en": "PAD W"
+  },
+  {
+    "series_id": 216,
+    "name_en": "Arena Invade Equip Material"
+  },
+  {
+    "series_id": 217,
+    "name_en": "My Hero Academia"
+  },
+  {
+    "series_id": 218,
+    "name_en": "Deadly Sin Dragons & Key Heroes"
+  },
+  {
+    "series_id": 219,
+    "name_en": "Demon Slayer"
+  },
+  {
+    "series_id": 220,
+    "name_en": "Mystics & Spectres"
+  },
+  {
+    "series_id": 221,
+    "name_en": "Ninjala"
+  },
+  {
+    "series_id": 222,
+    "name_en": "Monogatari"
+  },
+  {
+    "series_id": 223,
+    "name_en": "Ninja Mob"
+  },
+  {
+    "series_id": 224,
+    "name_en": "Dracoblades"
+  },
+  {
+    "series_id": 225,
+    "name_en": "Great Witch I"
+  },
+  {
+    "series_id": 226,
+    "name_en": "Great Witch II"
+  },
+  {
+    "series_id": 227,
+    "name_en": "Odin"
+  },
+  {
+    "series_id": 228,
+    "name_en": "Sonia"
+  },
+  {
+    "series_id": 229,
+    "name_en": "Norn"
+  },
+  {
+    "series_id": 230,
+    "name_en": "Metatron"
+  },
+  {
+    "series_id": 231,
+    "name_en": "Kali"
+  },
+  {
+    "series_id": 232,
+    "name_en": "Picture Book Exclusive"
+  },
+  {
+    "series_id": 233,
+    "name_en": "Fest Three Kingdoms"
+  },
+  {
+    "series_id": 234,
+    "name_en": "Dimension Dragon Caller"
+  },
+  {
+    "series_id": 235,
+    "name_en": "Contract Dragonbound"
+  },
+  {
+    "series_id": 236,
+    "name_en": "Phantom Demon"
+  },
+  {
+    "series_id": 237,
+    "name_en": "Steel Star God"
+  },
+  {
+    "series_id": 238,
+    "name_en": "Fenrir"
+  },
+  {
+    "series_id": 239,
+    "name_en": "Sherias"
+  },
+  {
+    "series_id": 240,
+    "name_en": "Mechdragon God"
+  },
+  {
+    "series_id": 241,
+    "name_en": "Demon Lord"
+  },
+  {
+    "series_id": 242,
+    "name_en": "Japanese Storm God"
+  },
+  {
+    "series_id": 243,
+    "name_en": "Japanese Genesis God"
+  },
+  {
+    "series_id": 244,
+    "name_en": "Irish Morrigan"
+  },
+  {
+    "series_id": 245,
+    "name_en": "Lovecraft"
+  },
+  {
+    "series_id": 246,
+    "name_en": "Royals"
+  },
+  {
+    "series_id": 247,
+    "name_en": "Spring Fest Exchange"
+  },
+  {
+    "series_id": 248,
+    "name_en": "PAD Appreciation Exchange"
+  },
+  {
+    "series_id": 249,
+    "name_en": "PAD Appreciation 2019 Exchange"
+  },
+  {
+    "series_id": 250,
+    "name_en": "Spring Forward Exchange"
+  },
+  {
+    "series_id": 251,
+    "name_en": "Radar 1"
+  },
+  {
+    "series_id": 252,
+    "name_en": "Radar 2"
+  },
+  {
+    "series_id": 253,
+    "name_en": "Radar 3"
+  },
+  {
+    "series_id": 254,
+    "name_en": "Radar 4"
+  },
+  {
+    "series_id": 255,
+    "name_en": "Radar 5"
+  },
+  {
+    "series_id": 256,
+    "name_en": "Technical Machine Boss"
+  },
+  {
+    "series_id": 257,
+    "name_en": "Marvel Collab"
+  },
+  {
+    "series_id": 258,
+    "name_en": "9th Anniversary Memorial Exchange"
+  },
+  {
+    "series_id": 259,
+    "name_en": "Killer Latent Tamadra"
+  },
+  {
+    "series_id": 260,
+    "name_en": "Resist Latent Tamadra"
+  },
+  {
+    "series_id": 261,
+    "name_en": "Stat Enhance Latent Tamadra"
+  },
+  {
+    "series_id": 262,
+    "name_en": "Submarine"
+  },
+  {
+    "series_id": 263,
+    "name_en": "Star-Twined Fairies"
+  },
+  {
+    "series_id": 264,
+    "name_en": "Jujutsu Kaisen"
+  },
+  {
+    "series_id": 265,
+    "name_en": "Dragon Quest: Adventure of Dai Collab"
+  },
+  {
+    "series_id": 266,
+    "name_en": "STAR WARS"
+  },
+  {
+    "series_id": 267,
+    "name_en": "Prince of Tennis"
+  },
+  {
+    "series_id": 268,
+    "name_en": "One Punch Man"
+  },
+  {
+    "series_id": 269,
+    "name_en": "Ultraman"
+  },
+  {
+    "series_id": 270,
+    "name_en": "Illusory Artists"
+  },
+  {
+    "series_id": 271,
+    "name_en": "10th Anniversary Memorial Exchange"
+  },
+  {
+    "series_id": 272,
+    "name_en": "Summons Board Collab"
+  },
+  {
+    "series_id": 273,
+    "name_en": "Divine Gate Collab"
+  },
+  {
+    "series_id": 274,
+    "name_en": "Freak Tower Collab"
+  },
+  {
+    "series_id": 275,
+    "name_en": "Sengoku Tenka Trigger Collab"
+  },
+  {
+    "series_id": 276,
+    "name_en": "Picotto Kingdom Collab"
+  },
+  {
+    "series_id": 277,
+    "name_en": "CHRONO MA:GIA Collab"
+  },
+  {
+    "series_id": 278,
+    "name_en": "Seventh Rebirth Collab"
+  },
+  {
+    "series_id": 279,
+    "name_en": "Calcio Fantasista Collab"
+  },
+  {
+    "series_id": 280,
+    "name_en": "Hunter × Hunter 1"
+  },
+  {
+    "series_id": 281,
+    "name_en": "Hunter × Hunter 2"
+  },
+  {
+    "series_id": 282,
+    "name_en": "Kingdom Collab"
+  },
+  {
+    "series_id": 283,
+    "name_en": "One Piece Collab"
+  },
+  {
+    "series_id": 284,
+    "name_en": "Dual Wielders"
+  },
+  {
+    "series_id": 285,
+    "name_en": "GungHo - Another Story"
+  },
+  {
+    "series_id": 286,
+    "name_en": "JoJo's Bizarre Adventure"
+  },
+  {
+    "series_id": 287,
+    "name_en": "Gundam Collab"
+  },
+  {
+    "series_id": 288,
+    "name_en": "Spy x Family"
+  },
+  {
+    "series_id": 289,
+    "name_en": "Weiß Schwarz"
+  },
+  {
+    "series_id": 290,
+    "name_en": "Dengeki Bunko"
+  },
+  {
+    "series_id": 291,
+    "name_en": "Hatsune Miku"
+  },
+  {
+    "series_id": 292,
+    "name_en": "Chainsaw Man"
+  },
+  {
+    "series_id": 293,
+    "name_en": "The Chalice of Ages and the Divine Droplets"
+  },
+  {
+    "series_id": 294,
+    "name_en": "That Time I Got Reincarnated as a Slime"
+  }
+]

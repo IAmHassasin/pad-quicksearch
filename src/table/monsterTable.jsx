@@ -453,7 +453,6 @@ const MonsterTable = ({ data }) => {
                         <img
                           key={index}
                           src={`./NULL.png`}
-                          // src={`./pad-quicksearch/NULL.png`}
                           alt={`awk_${element}`}
                           style={{
                             width: "31px",

@@ -28,9 +28,11 @@ const mergedData = (data) => {
 };
 
 const App = () => {
-  const [mode, setMode] = useState(false); // Mặc định dark mode là true
+  const [mode, setMode] = useState(false); // Dark mode = true
 
   const [passwordCheck, setPasswordCheck] = useState(false);
+
+  const passwordRequired = false;
 
   const changeColorMode = () => {
     setMode(!mode);
@@ -43,7 +45,7 @@ const App = () => {
   return (
     <>
     <PasswordDialog callbackCheckPassword={checkPassword}></PasswordDialog>
-      {passwordCheck ? (
+      {passwordCheck && passwordRequired ? (
         <div className={`App ${mode ? "DarkMode" : "LightMode"}`}>
           <Header darkMode={mode} callbackChangeMode={changeColorMode} />
           <MonsterTable data={mergedData(monsterDatas).slice().reverse()} />

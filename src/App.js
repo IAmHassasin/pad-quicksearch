@@ -44,7 +44,11 @@ const App = () => {
 
   return (
     <>
-    <PasswordDialog callbackCheckPassword={checkPassword}></PasswordDialog>
+      <div className={`App ${mode ? "DarkMode" : "LightMode"}`}>
+        <Header darkMode={mode} callbackChangeMode={changeColorMode} />
+        <MonsterTable data={mergedData(monsterDatas).slice().reverse()} />
+      </div>
+      {/* <PasswordDialog callbackCheckPassword={checkPassword}></PasswordDialog>
       {passwordCheck && passwordRequired ? (
         <div className={`App ${mode ? "DarkMode" : "LightMode"}`}>
           <Header darkMode={mode} callbackChangeMode={changeColorMode} />
@@ -52,7 +56,7 @@ const App = () => {
         </div>
       ) : (
         <div></div>
-      )}
+      )} */}
     </>
   );
 };

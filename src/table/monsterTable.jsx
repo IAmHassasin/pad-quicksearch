@@ -32,7 +32,7 @@ import seriesDatas from '../series.json';
  * @param {String} awokenString 
  * @param {Boolean} parseAwks 
  */
-const reformatAwokensList = (awokenString, parseAwks) => {
+export const reformatAwokensList = (awokenString, parseAwks) => {
   if (awokenString === '' || awokenString === null) return [];
   const parseAwoken = {
     '52': '10,10',
@@ -452,7 +452,8 @@ const MonsterTable = ({ data }) => {
                       element === null || element.toString() === "6" ? (
                         <img
                           key={index}
-                          src={`./NULL.png`}
+                          // src={`./NULL.png`}
+                          src={`./pad-quicksearch/NULL.png`}
                           alt={`awk_${element}`}
                           style={{
                             width: "31px",

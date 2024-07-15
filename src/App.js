@@ -5,6 +5,7 @@ import { useState } from 'react';
 import Header from './header/headerToggle';
 import PasswordDialog from './login/PasswordDialog';
 import DonationButton from './donationButton/donationButton';
+import Footer from './footer/footer';
 
 const mergedData = (data) => {
   const dataTemp = data.slice();
@@ -49,6 +50,7 @@ const App = () => {
         <Header darkMode={mode} callbackChangeMode={changeColorMode} />
         <MonsterTable data={mergedData(monsterDatas).slice().reverse()} />
         <DonationButton />
+        <Footer />
       </div>
       {/* <PasswordDialog callbackCheckPassword={checkPassword}></PasswordDialog>
       {passwordCheck && passwordRequired ? (
